@@ -27,7 +27,7 @@ const Signup: FunctionComponent<{}> = (): ReactElement => {
         const { user } = await createUserWithEmailAndPassword(auth, email, password)
         if (user) {
           Alert.alert("Success!", `User ${user.email} was successfully created!`)
-          navigation.navigate("signin")
+          navigation.dispatch(StackActions.replace("Sign In"))
           return true;
         }
       } catch (error) {
@@ -50,7 +50,7 @@ const Signup: FunctionComponent<{}> = (): ReactElement => {
       <OurButton title='| Sign up' onPress={doSignup} />
       <View style={{ flexDirection: "row" }}>
         <Text>Already have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.dispatch(StackActions.replace("signin"))}>
+        <TouchableOpacity onPress={() => navigation.dispatch(StackActions.replace("Sign In"))}>
           <Text style={{ color: Colors.blue, fontSize: 15 }}> | Sign in</Text>
         </TouchableOpacity>
       </View>

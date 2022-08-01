@@ -5,7 +5,7 @@ import {
   DrawerItemList,
 } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
-import { UserContext } from '../../navigation/mainNav';
+
 import {
   View,
   ScrollView,
@@ -17,13 +17,12 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-
 //===-=-=-=-=-=-=-=-=-=-=- components imports 
 
 export function Home() {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-
+      <Text>lkfajsdklfjaslkdfjalskdfjal;ksdf</Text>
     </View>
   );
 }

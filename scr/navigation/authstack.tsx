@@ -16,9 +16,8 @@ const Authstack: FunctionComponent<{}> = (props): ReactElement => {
   return (
 
     <Stack.Navigator>
-      <Stack.Screen name='signin' component={SignIn} />
-      <Stack.Screen name='signup' component={Signup} />
-      <Stack.Screen name="home" component={Home} />
+      <Stack.Screen name='Sign In' component={SignIn} />
+      <Stack.Screen name='Sign Up' component={Signup} />
     </Stack.Navigator>
 
 

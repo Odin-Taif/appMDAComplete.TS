@@ -17,11 +17,12 @@ import {
   Button,
   TouchableOpacity,
 } from "react-native";
+import TodoApp from "../TodoComponents/TodoApp";
 
 export function Tasks() {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Tasks</Text>
+      <TodoApp />
     </View>
   );
 }

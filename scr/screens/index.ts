@@ -1,10 +1,6 @@
-
-
-
 import SignIn from "./signIn";
 import Signup from "./signup";
+import Home from "./home";
+import Signout from "./signout";
 
-import Home from './dashboard'
-
-
-export {SignIn,Signup , Home}
+export { SignIn, Signup, Signout, Home };

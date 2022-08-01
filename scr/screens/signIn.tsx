@@ -18,7 +18,6 @@ const SignIn: FunctionComponent<{}> = (props): ReactElement => {
   //=-=-=-=-=-=-=-=-=-=-=-components stats-=-=-=|||
   const [email, setEmail] = useState<string | null>(null)
   const [password, setPassword] = useState<string | null>(null)
-
   const navigation = useNavigation()
 
   const doLogin = async () => {
@@ -30,7 +29,7 @@ const SignIn: FunctionComponent<{}> = (props): ReactElement => {
         if (user) {
           //-=-=- if user exists loggedin then we go with this. 
           Alert.alert("Success", ` ${user.email} has successfully signed in!`);
-          navigation.dispatch(StackActions.replace("home"))
+          navigation.dispatch(StackActions.replace("Home"))
           return true;
         }
         //-=-=-=-=- otherwise we catch this error. 
@@ -50,7 +49,7 @@ const SignIn: FunctionComponent<{}> = (props): ReactElement => {
       <OurButton title='| Sign in' onPress={doLogin} />
       <View style={{ flexDirection: "row" }}>
         <Text>Don't have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.dispatch(StackActions.replace("signup"))} >
+        <TouchableOpacity onPress={() => navigation.dispatch(StackActions.replace("Sign Up"))} >
           <Text style={{ color: colors.blue, fontSize: 15 }}>  | Sign up</Text>
         </TouchableOpacity>
       </View>
